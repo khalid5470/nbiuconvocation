@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBIU 1st Convocation 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    :root{
+      --primary:#0B1F3A;
+      --secondary:#133B73;
+      --gold:#D4AF37;
+      --white:#ffffff;
+      --gray:#F4F7FB;
+      --text:#1D2939;
+      --border:#D0D5DD;
+      --success:#12B76A;
+      --danger:#F04438;
+      --shadow:0 10px 40px rgba(11,31,58,.12);
+      --radius:20px;
+      --transition:.35s ease;
+      --glass:rgba(255,255,255,0.14);
+      --glass-border:rgba(255,255,255,0.2);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#fff;
+      color:var(--text);
+      overflow-x:hidden;
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    .container{
+      width:min(1180px,92%);
+      margin:auto;
+    }
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2rem,4vw,3rem);
+      color:var(--primary);
+      margin-bottom:16px;
+      font-weight:800;
+    }
+
+    .section-title p{
+      color:#667085;
+      max-width:700px;
+      margin:auto;
+      font-size:1.05rem;
+    }
+
+    /* NAVBAR */
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      transition:var(--transition);
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .nav-scrolled{
+      background:rgba(11,31,58,.92);
+      backdrop-filter:blur(14px);
+      box-shadow:0 10px 40px rgba(0,0,0,.1);
+    }
+
+    .logo{
+      color:#fff;
+      font-weight:800;
+      font-size:1.35rem;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .logo i{
+      color:var(--gold);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:#fff;
+      font-weight:500;
+      position:relative;
+    }
+
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      width:0%;
+      height:2px;
+      background:var(--gold);
+      left:0;
+      bottom:-5px;
+      transition:var(--transition);
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,var(--gold),#f4d66b);
+      color:#111;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .nav-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 30px rgba(212,175,55,.4);
+    }
+
+    .hamburger{
+      display:none;
+      color:#fff;
+      font-size:1.5rem;
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(11,31,58,.82),rgba(11,31,58,.9)),
+        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:rgba(212,175,55,.15);
+      border-radius:50%;
+      top:-100px;
+      right:-100px;
+      filter:blur(40px);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      color:#fff;
+      font-size:clamp(3rem,6vw,5rem);
+      line-height:1.1;
+      margin-bottom:24px;
+      font-weight:900;
+    }
+
+    .hero-text span{
+      color:var(--gold);
+    }
+
+    .hero-text p{
+      color:#E4E7EC;
+      font-size:1.1rem;
+      margin-bottom:35px;
+      max-width:650px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+      padding:16px 30px;
+      border-radius:14px;
+      font-weight:700;
+      transition:var(--transition);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,var(--gold),#f3d772);
+      color:#111;
+      box-shadow:0 10px 30px rgba(212,175,55,.3);
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,.2);
+      color:#fff;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.08);
+    }
+
+    .secondary-btn:hover{
+      background:rgba(255,255,255,.14);
+    }
+
+    .hero-card{
+      background:var(--glass);
+      border:1px solid var(--glass-border);
+      backdrop-filter:blur(18px);
+      border-radius:30px;
+      padding:35px;
+      color:#fff;
+      box-shadow:var(--shadow);
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    .hero-card h3{
+      margin-bottom:25px;
+      font-size:1.5rem;
+    }
+
+    .hero-card .item{
+      display:flex;
+      justify-content:space-between;
+      padding:15px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-card{
+      background:#fff;
+      border-radius:30px;
+      padding:35px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-card h3{
+      color:var(--primary);
+      margin-bottom:18px;
+      font-size:1.8rem;
+    }
+
+    .about-features{
+      margin-top:25px;
+      display:grid;
+      gap:18px;
+    }
+
+    .feature{
+      display:flex;
+      gap:15px;
+      align-items:flex-start;
+    }
+
+    .feature i{
+      color:var(--gold);
+      font-size:1.3rem;
+      margin-top:4px;
+    }
+
+    .about-image{
+      position:relative;
+    }
+
+    .about-image img{
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      background:linear-gradient(135deg,var(--primary),#102B52);
+      color:#fff;
+    }
+
+    .timeline .section-title h2,
+    .timeline .section-title p{
+      color:#fff;
+    }
+
+    .timeline-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .timeline-card{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(12px);
+      padding:35px;
+      border-radius:24px;
+      transition:var(--transition);
+    }
+
+    .timeline-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .timeline-card .date{
+      color:var(--gold);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    /* STATS */
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .stat-card{
+      background:#fff;
+      padding:40px;
+      border-radius:25px;
+      box-shadow:var(--shadow);
+      text-align:center;
+      transition:var(--transition);
+    }
+
+    .stat-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .stat-card i{
+      font-size:2rem;
+      color:var(--gold);
+      margin-bottom:20px;
+    }
+
+    .stat-number{
+      font-size:2.5rem;
+      font-weight:900;
+      color:var(--primary);
+    }
+
+    /* REGISTRATION */
+
+    .registration-wrapper{
+      background:#fff;
+      border-radius:35px;
+      padding:40px;
+      box-shadow:var(--shadow);
+    }
+
+    .step-progress{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:50px;
+      position:relative;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .step-progress::before{
+      content:'';
+      position:absolute;
+      top:22px;
+      left:0;
+      width:100%;
+      height:4px;
+      background:#E4E7EC;
+      z-index:1;
+    }
+
+    .progress-bar{
+      position:absolute;
+      top:22px;
+      left:0;
+      height:4px;
+      background:linear-gradient(135deg,var(--gold),#f3d772);
+      z-index:2;
+      transition:var(--transition);
+      width:0%;
+    }
+
+    .step{
+      position:relative;
+      z-index:3;
+      text-align:center;
+      flex:1;
+      min-width:100px;
+    }
+
+    .step-circle{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      margin:auto;
+      background:#fff;
+      border:2px solid #D0D5DD;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .step.active .step-circle,
+    .step.completed .step-circle{
+      background:var(--gold);
+      border-color:var(--gold);
+      color:#111;
+    }
+
+    .step p{
+      margin-top:10px;
+      font-size:.9rem;
+      font-weight:600;
+    }
+
+    .form-step{
+      display:none;
+      animation:fade .4s ease;
+    }
+
+    .form-step.active{
+      display:block;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(15px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .form-group{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .form-group label{
+      margin-bottom:10px;
+      font-weight:600;
+      color:var(--primary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      border:1px solid var(--border);
+      padding:16px;
+      border-radius:14px;
+      font-size:1rem;
+      outline:none;
+      transition:var(--transition);
+      background:#fff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 4px rgba(212,175,55,.15);
+    }
+
+    textarea{
+      resize:none;
+      min-height:120px;
+    }
+
+    .full-width{
+      grid-column:1/-1;
+    }
+
+    .upload-zone{
+      border:2px dashed #CBD5E1;
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+      cursor:pointer;
+      transition:var(--transition);
+      background:#F8FAFC;
+    }
+
+    .upload-zone:hover{
+      border-color:var(--gold);
+      background:#fff;
+    }
+
+    .upload-preview{
+      width:120px;
+      height:120px;
+      border-radius:20px;
+      overflow:hidden;
+      margin:20px auto 0;
+      display:none;
+      border:4px solid #fff;
+      box-shadow:var(--shadow);
+    }
+
+    .upload-preview img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .guest-container{
+      display:grid;
+      gap:20px;
+      margin-top:25px;
+    }
+
+    .guest-card{
+      border:1px solid #E4E7EC;
+      padding:25px;
+      border-radius:20px;
+      background:#FAFBFC;
+      position:relative;
+    }
+
+    .guest-remove{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:#fff;
+      border:none;
+      width:35px;
+      height:35px;
+      border-radius:50%;
+      cursor:pointer;
+      color:var(--danger);
+      box-shadow:0 5px 15px rgba(0,0,0,.08);
+    }
+
+    .add-guest-btn{
+      margin-top:25px;
+      border:none;
+      background:var(--primary);
+      color:#fff;
+      padding:14px 24px;
+      border-radius:14px;
+      cursor:pointer;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .add-guest-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .payment-box{
+      background:linear-gradient(135deg,var(--primary),#163F7A);
+      color:#fff;
+      padding:35px;
+      border-radius:28px;
+    }
+
+    .payment-box ul{
+      margin:25px 0;
+      display:grid;
+      gap:12px;
+    }
+
+    .payment-box li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .payment-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 26px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--gold),#f4d66b);
+      color:#111;
+      font-weight:800;
+      margin-top:20px;
+    }
+
+    .form-navigation{
+      display:flex;
+      justify-content:space-between;
+      margin-top:50px;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      border:none;
+      padding:15px 28px;
+      border-radius:14px;
+      cursor:pointer;
+      font-weight:700;
+      transition:var(--transition);
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn-secondary{
+      background:#EEF2F6;
+      color:var(--primary);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* FAQ */
+
+    .faq-item{
+      border:1px solid #E4E7EC;
+      border-radius:18px;
+      margin-bottom:18px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 8px 25px rgba(0,0,0,.04);
+    }
+
+    .faq-question{
+      width:100%;
+      border:none;
+      background:#fff;
+      padding:22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      cursor:pointer;
+      font-size:1rem;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s ease;
+      padding:0 22px;
+    }
+
+    .faq-answer p{
+      padding-bottom:22px;
+      color:#667085;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:var(--primary);
+      color:#fff;
+      padding:70px 0 30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+      margin-bottom:50px;
+    }
+
+    .footer-brand h3{
+      font-size:1.7rem;
+      margin-bottom:20px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:12px;
+    }
+
+    .footer-links a{
+      color:#D0D5DD;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:25px;
+      text-align:center;
+      color:#D0D5DD;
+    }
+
+    /* SCROLL TOP */
+
+    .scroll-top{
+      position:fixed;
+      bottom:30px;
+      right:30px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:var(--gold);
+      border:none;
+      color:#111;
+      font-size:1.1rem;
+      cursor:pointer;
+      box-shadow:0 10px 25px rgba(0,0,0,.18);
+      opacity:0;
+      visibility:hidden;
+      transition:var(--transition);
+      z-index:999;
+    }
+
+    .scroll-top.active{
+      opacity:1;
+      visibility:visible;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:991px){
+
+      .hero-content,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero-actions{
+        justify-content:center;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:100%;
+        right:-100%;
+        width:280px;
+        background:rgba(11,31,58,.97);
+        flex-direction:column;
+        padding:35px;
+        transition:var(--transition);
+        border-radius:0 0 0 20px;
+      }
+
+      .nav-links.active{
+        right:0;
+      }
+
+      .hamburger{
+        display:block;
+      }
+    }
+
+    @media(max-width:768px){
+
+      section{
+        padding:80px 0;
+      }
+
+      .registration-wrapper{
+        padding:25px;
+      }
+
+      .step p{
+        font-size:.75rem;
+      }
+
+      .hero-text h1{
+        font-size:2.7rem;
+      }
+
+      .form-navigation{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container navbar">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        NBIU Convocation
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#registration">Registration</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="nav-btn">Apply Now</a>
+      </nav>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>
+          NBIU <span>1st Convocation</span> 2026
+        </h1>
+
+        <p>
+          Celebrate academic excellence and lifelong achievement at the inaugural convocation ceremony of NBIU. Register now to participate in this historic milestone with your fellow graduates.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#registration" class="primary-btn">
+            <i class="fa-solid fa-user-graduate"></i>
+            Register Now
+          </a>
+
+          <a href="#timeline" class="secondary-btn">
+            <i class="fa-solid fa-calendar-days"></i>
+            View Timeline
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Convocation Highlights</h3>
+
+        <div class="item">
+          <span>Ceremony Date</span>
+          <strong>1 December 2026</strong>
+        </div>
+
+        <div class="item">
+          <span>Venue</span>
+          <strong>NBIU Central Auditorium</strong>
+        </div>
+
+        <div class="item">
+          <span>Expected Graduates</span>
+          <strong>4,000+</strong>
+        </div>
+
+        <div class="item">
+          <span>Registration Deadline</span>
+          <strong>15 October 2026</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About the Convocation</h2>
+        <p>
+          The 1st Convocation of NBIU marks a prestigious celebration honoring the academic achievements and dedication of our graduates.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>A Historic Academic Celebration</h3>
+
+          <p>
+            NBIU proudly hosts its inaugural convocation ceremony to recognize graduates from multiple faculties and disciplines. This grand event will bring together students, families, faculty members, dignitaries, and distinguished guests.
+          </p>
+
+          <div class="about-features">
+            <div class="feature">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <strong>Official Degree Conferment</strong>
+                <p>Receive recognition for your academic accomplishments.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-users"></i>
+              <div>
+                <strong>Guest Participation</strong>
+                <p>Invite your loved ones to celebrate your success.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-camera-retro"></i>
+              <div>
+                <strong>Memorable Experience</strong>
+                <p>Capture unforgettable moments from your academic journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Convocation Ceremony">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline" id="timeline">
+    <div class="container">
+      <div class="section-title">
+        <h2>Registration Timeline</h2>
+        <p>
+          Important milestones and deadlines for the NBIU 1st Convocation 2026 registration process.
+        </p>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="date">01 August 2026</div>
+          <h3>Registration Opens</h3>
+          <p>Online application portal officially opens for graduates.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="date">15 October 2026</div>
+          <h3>Registration Deadline</h3>
+          <p>Last date for submitting applications and payments.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="date">05 November 2026</div>
+          <h3>Confirmation Release</h3>
+          <p>Approved participant list and guest confirmations published.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="date">01 December 2026</div>
+          <h3>Convocation Day</h3>
+          <p>The official 1st Convocation Ceremony of NBIU takes place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fa-solid fa-user-graduate"></i>
+          <div class="stat-number" data-target="4000">0</div>
+          <p>Graduates</p>
+        </div>
+
+        <div class="stat-card">
+          <i class="fa-solid fa-building-columns"></i>
+          <div class="stat-number" data-target="10">0</div>
+          <p>Departments</p>
+        </div>
+
+        <div class="stat-card">
+          <i class="fa-solid fa-users"></i>
+          <div class="stat-number" data-target="8000">0</div>
+          <p>Guests Expected</p>
+        </div>
+
+        <div class="stat-card">
+          <i class="fa-solid fa-medal"></i>
+          <div class="stat-number" data-target="1">0</div>
+          <p>Historic Convocation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section id="registration">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Convocation Registration</h2>
+        <p>
+          Complete your registration through our secure multi-step application process.
+        </p>
+      </div>
+
+      <div class="registration-wrapper">
+
+        <!-- Progress -->
+        <div class="step-progress">
+          <div class="progress-bar" id="progressBar"></div>
+
+          <div class="step active">
+            <div class="step-circle">1</div>
+            <p>Identity</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">2</div>
+            <p>Academic</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">3</div>
+            <p>Contact</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">4</div>
+            <p>Guests</p>
+          </div>
+
+          <div class="step">
+            <div class="step-circle">5</div>
+            <p>Payment</p>
+          </div>
+        </div>
+
+        <form id="registrationForm">
+
+          <!-- STEP 1 -->
+          <div class="form-step active">
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label>Student ID *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Full Name (English) *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Full Name (Bangla) *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Father’s Name *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Mother’s Name *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Date of Birth *</label>
+                <input type="date" required>
+              </div>
+
+              <div class="form-group">
+                <label>Gender *</label>
+                <select required>
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Nationality *</label>
+                <input type="text" placeholder="Bangladeshi" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label>NID/Birth Certificate No *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label>Student Photo Upload *</label>
+
+                <div class="upload-zone" id="uploadZone">
+                  <i class="fa-solid fa-cloud-arrow-up fa-2x"></i>
+                  <p>Drag & Drop Photo or Click to Upload</p>
+                  <input type="file" id="photoInput" hidden accept="image/*">
+
+                  <div class="upload-preview" id="previewContainer">
+                    <img id="previewImage" alt="Preview">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="form-step">
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label>Department *</label>
+                <select required>
+                  <option value="">Select Department</option>
+                  <option>Computer Science & Engineering</option>
+                  <option>Business Administration</option>
+                  <option>English</option>
+                  <option>Law</option>
+                  <option>Electrical Engineering</option>
+                  <option>Bangla</option>
+                  <option>Islamic History and Culture</option>
+                  <option>Political Science</option>
+                  <option>Sociology</option>
+                  <option>Journalism</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Program/Degree *</label>
+                <input type="text" placeholder="B.Sc / MBA / MA" required>
+              </div>
+
+              <div class="form-group">
+                <label>Batch *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Passing Year *</label>
+                <input type="number" required>
+              </div>
+
+              <div class="form-group">
+                <label>CGPA *</label>
+                <input type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label>Roll Number *</label>
+                <input type="text" required>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="form-step">
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label>Mobile Number *</label>
+                <input type="tel" required>
+              </div>
+
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label>Present Address *</label>
+                <textarea required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label>Permanent Address *</label>
+                <textarea required></textarea>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="form-step">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Number of Guests *</label>
+                <select id="guestCount">
+                  <option value="0">0 Guest</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="guest-container" id="guestContainer"></div>
+
+          </div>
+
+          <!-- STEP 5 -->
+          <div class="form-step">
+
+            <div class="payment-box">
+              <h3>Convocation Payment Instructions</h3>
+
+              <ul>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Registration fee must be completed before final approval.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Accepted payment methods: bKash, Nagad, Bank Transfer.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Upload payment proof after completing the transaction.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Payment verification may take up to 48 hours.
+                </li>
+              </ul>
+
+              <a href="#" class="payment-btn">
+                <i class="fa-solid fa-credit-card"></i>
+                Proceed to Payment Gateway
+              </a>
+            </div>
+
+          </div>
+
+          <!-- NAVIGATION -->
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary" id="prevBtn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Previous
+            </button>
+
+            <button type="button" class="btn btn-primary" id="nextBtn">
+              Next Step
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Find answers to common questions regarding the convocation registration process.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Who can participate in the convocation?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Students who have successfully completed their degree requirements and are approved by the university are eligible to participate.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I bring guests?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. Each graduate may invite up to 2 guests depending on registration approval.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How will I receive confirmation?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Confirmation details will be sent to your registered email and mobile number.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>NBIU Convocation 2026</h3>
+          <p>
+            Celebrating excellence, achievement, and the beginning of a new professional journey.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#registration">Registration</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+
+          <div class="footer-links">
+            <a href="#">registrar@nbiu.edu.bd</a>
+            <a href="#">+880 1234 567890</a>
+            <a href="#">NBIU Campus, Bangladesh</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 NBIU 1st Convocation. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCROLL TOP -->
+  <button class="scroll-top" id="scrollTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // =========================
+    // NAVBAR SCROLL EFFECT
+    // =========================
+
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50){
+        header.classList.add('nav-scrolled');
+      }else{
+        header.classList.remove('nav-scrolled');
+      }
+    });
+
+    // =========================
+    // MOBILE MENU
+    // =========================
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // =========================
+    // STATS COUNTER
+    // =========================
+
+    const counters = document.querySelectorAll('.stat-number');
+
+    counters.forEach(counter => {
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(current < target){
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCounter, 25);
+        }else{
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
+    });
+
+    // =========================
+    // MULTI STEP FORM
+    // =========================
+
+    const steps = document.querySelectorAll('.form-step');
+    const stepIndicators = document.querySelectorAll('.step');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const progressBar = document.getElementById('progressBar');
+
+    let currentStep = 0;
+
+    function updateFormSteps(){
+
+      steps.forEach((step, index) => {
+        step.classList.toggle('active', index === currentStep);
+      });
+
+      stepIndicators.forEach((step, index) => {
+
+        step.classList.remove('active', 'completed');
+
+        if(index < currentStep){
+          step.classList.add('completed');
+        }else if(index === currentStep){
+          step.classList.add('active');
+        }
+      });
+
+      progressBar.style.width = `${(currentStep) / (steps.length - 1) * 100}%`;
+
+      prevBtn.style.display = currentStep === 0 ? 'none' : 'inline-block';
+
+      if(currentStep === steps.length - 1){
+        nextBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submit Registration';
+      }else{
+        nextBtn.innerHTML = 'Next Step <i class="fa-solid fa-arrow-right"></i>';
+      }
+    }
+
+    function validateStep(){
+
+      const currentFields = steps[currentStep].querySelectorAll('input, select, textarea');
+
+      for(let field of currentFields){
+        if(field.hasAttribute('required') && !field.value.trim()){
+          field.focus();
+          field.style.borderColor = 'red';
+
+          setTimeout(() => {
+            field.style.borderColor = '';
+          }, 2000);
+
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    nextBtn.addEventListener('click', () => {
+
+      if(!validateStep()) return;
+
+      if(currentStep < steps.length - 1){
+        currentStep++;
+        updateFormSteps();
+      }else{
+        alert('Registration Submitted Successfully!');
+        document.getElementById('registrationForm').reset();
+        location.reload();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if(currentStep > 0){
+        currentStep--;
+        updateFormSteps();
+      }
+    });
+
+    updateFormSteps();
+
+    // =========================
+    // PHOTO UPLOAD
+    // =========================
+
+    const uploadZone = document.getElementById('uploadZone');
+    const photoInput = document.getElementById('photoInput');
+    const previewImage = document.getElementById('previewImage');
+    const previewContainer = document.getElementById('previewContainer');
+
+    uploadZone.addEventListener('click', () => {
+      photoInput.click();
+    });
+
+    photoInput.addEventListener('change', (e) => {
+      handleImage(e.target.files[0]);
+    });
+
+    uploadZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadZone.style.borderColor = '#D4AF37';
+    });
+
+    uploadZone.addEventListener('dragleave', () => {
+      uploadZone.style.borderColor = '#CBD5E1';
+    });
+
+    uploadZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadZone.style.borderColor = '#CBD5E1';
+
+      const file = e.dataTransfer.files[0];
+      handleImage(file);
+    });
+
+    function handleImage(file){
+
+      if(!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        previewImage.src = e.target.result;
+        previewContainer.style.display = 'block';
+      };
+
+      reader.readAsDataURL(file);
+    }
+
+    // =========================
+    // GUEST MANAGEMENT
+    // =========================
+
+    const guestCount = document.getElementById('guestCount');
+    const guestContainer = document.getElementById('guestContainer');
+
+    guestCount.addEventListener('change', () => {
+
+      const count = parseInt(guestCount.value);
+
+      guestContainer.innerHTML = '';
+
+      for(let i = 1; i <= count; i++){
+
+        const guestCard = document.createElement('div');
+        guestCard.className = 'guest-card';
+
+        guestCard.innerHTML = `
+          <h3>Guest ${i}</h3>
+
+          <div class="form-grid" style="margin-top:20px;">
+
+            <div class="form-group">
+              <label>Guest Name</label>
+              <input type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <select required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" required>
+            </div>
+
+            <div class="form-group">
+              <label>Relation</label>
+              <input type="text" required>
+            </div>
+
+          </div>
+        `;
+
+        guestContainer.appendChild(guestCard);
+      }
+    });
+
+    // =========================
+    // FAQ ACCORDION
+    // =========================
+
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+
+      question.addEventListener('click', () => {
+
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('i');
+
+        if(answer.style.maxHeight){
+          answer.style.maxHeight = null;
+          icon.classList.replace('fa-minus', 'fa-plus');
+        }else{
+
+          document.querySelectorAll('.faq-answer').forEach(item => {
+            item.style.maxHeight = null;
+          });
+
+          document.querySelectorAll('.faq-question i').forEach(i => {
+            i.classList.replace('fa-minus', 'fa-plus');
+          });
+
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.classList.replace('fa-plus', 'fa-minus');
+        }
+      });
+    });
+
+    // =========================
+    // SCROLL TOP BUTTON
+    // =========================
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+
+      if(window.scrollY > 400){
+        scrollTopBtn.classList.add('active');
+      }else{
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top:0,
+        behavior:'smooth'
+      });
+    });
+
+  </script>
+</body>
+</html>
